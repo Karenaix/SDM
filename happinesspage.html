@@ -12,7 +12,7 @@
 
 	<h3 align="center">
 		Choose Ur Happiness Of Work Now!
-	</h2>
+	</h3>
 
 	<script type="text/javascript">
 
@@ -24,8 +24,32 @@
 			var myemotion = $("input[name='myemotion']:checked").val();
 			var teamemotion = $("input[name='teamemotion']:checked").val();
 			confirm(myemotion+","+ teamemotion);	//test two radio result
-		};
+		}
 
+        function myFun1(sId){
+			var radio1 = document.getElementsByName('radio1');
+			for (var i = 0; i < radio1.length; i++) {
+				if (radio1[i].id == sId) {
+					radio1[i].previousSibling.previousSibling.checked = true;
+					radio1[i].style.border = '5px solid blue';
+				} 
+				else {
+					radio1[i].style.border = '5px solid white';
+				}
+			}
+		}
+		function myFun2(sId){
+			var radio2 = document.getElementsByName('radio2');
+			for (var j = 0; j < radio2.length; j++) {
+				if (radio2[j].id == sId) {
+					radio2[j].previousSibling.previousSibling.checked = true;
+					radio2[j].style.border = '5px solid blue';
+				} 
+				else {
+					radio2[j].style.border = '5px solid white';
+				}
+			}
+		}
 
 	</script>	
 
@@ -37,59 +61,18 @@
 		}
 		body{
 			overflow: hidden;
-			/* border: 0ch; */
 		}
-		div{
-			position: 5px;
-		}		
+
 		input{
 			display: none;
 			appearance:none;
-		}
-		#my_emotion label, #team_emotion label{
-			cursor: pointer;
-			/* display: block; */
-			
-					
-		}
-		img{
-			border: 3px solid white;
-		}
+        }
+        img{
+            border:5px solid white;
+        }
 		#my_emotion div, #team_emotion div{
 			display: inline;
-			
-			/* overflow: hidden; */
-			/* position: relative; */
 		}
-		#my_emotion label{
-
-		}
-		#my_emotion input:checked + img{
-			border: 3px solid blue;
-			display: block;
-		}
-		/* #my_emotion label:hover{
-			border: 3px solid blue;
-			overflow: visible;
-		} */
-
-		/* Checked state */
-
-		#team_emotion label{
-            /* filter: grayscale(1); */
-		}
-
-		#team_emotion input:checked + img{
-			border: 3px solid blue;
-			box-sizing: border-box;
-			/* box-shadow: 3px solid blue; */
-			/* filter: unset; */
-		}
-		#team_emotion img:hover{
-			border: 3px solid blue;
-			/* overflow: visible; */
-		}
-
 	</style>
 </head>
 <body>
@@ -102,31 +85,31 @@
 			<div class="col-1">
 				<label for="mysarrow">
 					<input type="radio" name="myemotion" value="1" id="mysarrow">
-					<img src="./image/Picture1.png" class="thumbnail">
+					<img src="./image/Picture1.png" id="a1" name="radio1" onclick="myFun1(this.id)">
 				</label>
 			</div>
 			<div class="col-1">
 				<label for="mysad">
 					<input type="radio" name="myemotion" value="2" id="mysad">
-					<img src="./image/Picture2.png" class="thumbnail">
+					<img src="./image/Picture2.png" id="b1" name="radio1" onclick="myFun1(this.id)">
 				</label>
 			</div>
 			<div class="col-1">
 				<label for="mynormal">
 					<input type="radio" name="myemotion" value="3" id="mynormal">
-					<img src="./image/Picture3.png" class="thumbnail">
+					<img src="./image/Picture3.png" id="c1" name="radio1" onclick="myFun1(this.id)">
 				</label>
 			</div>
 			<div class="col-1">
 				<label for="myhappy">
 					<input type="radio" name="myemotion" value="4" id="myhappy">
-					<img src="./image/Picture4.png" class="thumbnail">
+					<img src="./image/Picture4.png" id="d1" name="radio1" onclick="myFun1(this.id)">
 				</label>
 			</div>
 			<div class="col-1">
 				<label for="myexcited">
 					<input type="radio" name="myemotion" value="5" id="myexcited">
-					<img src="./image/Picture5.png" class="thumbnail">
+					<img src="./image/Picture5.png" id="e1" name="radio1" onclick="myFun1(this.id)">
 				</label>
 			</div>
 		</div>
@@ -136,34 +119,34 @@
 		</div>
 
 		<div class="row text-center" id="team_emotion">
-			<div class="col-1" class="image-selector">
+			<div class="col-1">
 				<label for="sarrow">
 					<input type="radio" name="teamemotion" value="1" id="sarrow">
-					<img src="./image/Picture1.png" class="thumbnail">
+					<img src="./image/Picture1.png" id="a2" name="radio2" onclick="myFun2(this.id)">
 				</label>
 			</div>
-			<div class="col-1" class="image-selector">
+			<div class="col-1">
 				<label for="sad">
 					<input type="radio" name="teamemotion" value="2" id="sad">
-					<img src="./image/Picture2.png" class="thumbnail">
+					<img src="./image/Picture2.png" id="b2" name="radio2" onclick="myFun2(this.id)">
 				</label>
 			</div>
-			<div class="col-1" class="image-selector">
+			<div class="col-1">
 				<label for="normal">
-					<input type="radio" name="teamemotion" value="3" id="normal" checked="checked">
-					<img src="./image/Picture3.png" class="thumbnail">
+					<input type="radio" name="teamemotion" value="3" id="normal">
+					<img src="./image/Picture3.png" id="c2" name="radio2" onclick="myFun2(this.id)">
 				</label>
 			</div>
-			<div class="col-1" class="image-selector">
+			<div class="col-1">
 				<label for="happy">
 					<input type="radio" name="teamemotion" value="4" id="happy">
-					<img src="./image/Picture4.png" class="thumbnail">
+					<img src="./image/Picture4.png" id="d2" name="radio2" onclick="myFun2(this.id)">
 				</label>
 			</div>
-			<div class="col-1" class="image-selector">
+			<div class="col-1">
 				<label for="excited">
 					<input type="radio" name="teamemotion" value="5" id="excited">
-					<img src="./image/Picture5.png" class="thumbnail">
+					<img src="./image/Picture5.png" id="e2" name="radio2" onclick="myFun2(this.id)">
 				</label>
 			</div>
 		</div>
@@ -172,7 +155,7 @@
 			<input type="submit" id="submithapiness" class="btn btn-success" onclick="getHappiness()" >
 		</div>
 			
-	</div>
+    </div>
+    
 </body>
 </html>
-
