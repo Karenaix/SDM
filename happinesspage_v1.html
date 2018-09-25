@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="UTF-8">
+	<title>How.Is.It</title>
+	<h2 align="center">Choose Ur Happiness of Today!</h2>
+	<script type="text/javascript">
+		function show_sumit_happiness() {
+			var r=confirm("Once u sumit, u cannot change!");
+			if(r==true){
+				alter("SUMIT");
+			}
+			else{
+				alter("CANCLE");
+			}
+		}
+	</script>
+
+	<style type="text/css">
+		/* h2
+		{
+			font-family: Century Gothic;
+			background-color: #f0f0f0;
+			color: #fa9600;
+			text-decoration: underline;	
+		}
+		.happiness_choice
+		{
+			background-color: #00c2b1; 
+		} */
+	</style>
+
+</head>
+<body>
+	<table class="happpinesspage" align="center">
+		<tbody>
+			<tr>
+				<td>
+					<div id="dv_userinfo" class="info">
+						<label>
+							Hi, Jim(user_name),<br>
+						</label>
+					</div>
+					<div id="dv_ownhappiness" class="">
+						<label>
+							Please grade your happiness about your own.
+						</label>
+						<form action="" method="get" id="">
+							<!-- action: URL
+							method: get/post? -->
+							<div class="happiness_choice">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<img src="./image/Picture1.png">
+											</td>
+											<td>
+												<img src="./image/Picture2.png">
+											</td>
+											<td>
+												<img src="./image/Picture3.png">
+											</td>
+											<td>
+												<img src="./image/Picture4.png">
+											</td>
+											<td>
+												<img src="./image/Picture5.png">
+											</td>
+										</tr>
+										<tr>
+												<td>
+													<label><input type="radio" id="very bad" name="ownhappiness" value=""> very bad</label>
+												</td>
+												<td>
+													<label><input type="radio" id="not well" name="ownhappiness" value=""> not well</label>
+												</td>
+												<td>
+													<label><input type="radio" id="normal"name="ownhappiness" value=""> normal</label>
+												</td>
+												<td>	
+													<label><input type="radio" id="happpy" name="ownhappiness" value=""> happy</label>
+												</td>
+												<td>	
+													<label><input type="radio" id="very happy" name="ownhappiness" value=""> very happy</label>
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+						<br>	
+					</div>
+					<div id="dv_teaminfo" class="info">
+						<label>For Team01(team_name),</label>
+					</div>
+					<div id="dv_teamhappiness" class="">
+						<label>Please grade your happiness about your team.</label>
+						<form action="" method="get" id="">
+							<div class="happiness_choice">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<img src="./image/Picture1.png">
+											</td>
+											<td>
+												<img src="./image/Picture2.png">
+											</td>
+											<td>
+												<img src="./image/Picture3.png">
+											</td>
+											<td>
+												<img src="./image/Picture4.png">
+											</td>
+											<td>
+												<img src="./image/Picture5.png">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<label><input type="radio" id="very bad" name="teamhappiness" value=""> very bad</label>											
+											</td>
+											<td>
+												<label><input type="radio" id="not well" name="teamhappiness" value=""> not well</label>
+											</td>
+											<td>
+												<label><input type="radio" id="normal"name="teamhappiness" value=""> normal</label>
+											</td>
+											<td>	
+												<label><input type="radio" id="happpy" name="teamhappiness" value=""> happy</label>
+											</td>
+											<td>	
+												<label><input type="radio" id="very happy" name="teamhappiness" value=""> very happy</label>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+							</div>
+						</form>	
+						<br>					
+					</div>
+					<div id="sumit_button" class="button">
+						<input type="button" onClick="show_sumit_happiness()" value="Sumit">
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
